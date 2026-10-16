@@ -1,0 +1,232 @@
+﻿/* ==========================================
+   아기공룡 둘리 테마 스타일시트 (mportpolio.css)
+   ========================================== */
+
+/* 웹 폰트 로드: 레트로 만화 느낌의 둥글둥글한 폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+:root {
+  --dooly-green: #4CAF50;      /* 둘리 피부 초록색 */
+  --dooly-light-green: #E8F5E9;/* 연한 초록 배경색 */
+  --dooly-pink: #FF8A80;       /* 둘리 혀/입속 분홍색 */
+  --dooly-yellow: #FFF59D;     /* 둘리 코/뿔 연노랑색 */
+  --dooly-dark-green: #2E7D32; /* 포인트 테두리용 짙은 초록 */
+  --text-color: #2C3E50;       /* 글자색 */
+  --bg-color: #F1F8E9;         /* 전체 배경색 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Jua', 'Pretendard', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------
+   헤더 (HEADER) - 초록색 둘리 테마
+   ------------------------------------------ */
+header {
+  background-color: var(--dooly-green);
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 6px 0 var(--dooly-dark-green);
+  border: 4px solid var(--dooly-dark-green);
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0px var(--dooly-dark-green);
+}
+
+/* 둘리 혀 모양 귀여운 포인트 */
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  width: 40px;
+  height: 25px;
+  background-color: var(--dooly-pink);
+  border-radius: 0 0 20px 20px;
+  border: 3px solid var(--dooly-dark-green);
+}
+
+/* ------------------------------------------
+   네비게이션 (NAV) - 둘리 코/뿔 연노란 탭 버튼
+   ------------------------------------------ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  background-color: #FFFFFF;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 15px;
+  border: 3px solid var(--dooly-dark-green);
+  box-shadow: 0 4px 0 #C8E6C9;
+}
+
+
+nav span {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--dooly-dark-green);
+  background-color: var(--dooly-yellow);
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 2px solid var(--dooly-green);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: var(--dooly-pink);
+  color: white;
+  transform: translateY(-3px) rotate(-2deg);
+  box-shadow: 0 4px 0 var(--dooly-dark-green);
+}
+
+/* ------------------------------------------
+   메인 콘텐츠 레이아웃 (CONTENT & SECTION & ASIDE)
+   ------------------------------------------ */
+.content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* 자기소개 영역 */
+.section1 {
+  flex: 3;
+  background-color: #FFFFFF;
+  padding: 25px;
+  border-radius: 20px;
+  border: 3px solid var(--dooly-green);
+  box-shadow: 0 5px 0 #C8E6C9;
+}
+
+.section1 h3 {
+  font-size: 1.6rem;
+  color: var(--dooly-dark-green);
+  border-bottom: 3px dashed var(--dooly-green);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.section1 img {
+  float: left;
+  width: 140px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 3px solid var(--dooly-green);
+  background-color: var(--dooly-light-green);
+  padding: 5px;
+  box-shadow: 3px 3px 0 var(--dooly-dark-green);
+}
+
+.section1 p {
+  font-size: 1.05rem;
+  word-break: keep-all;
+  text-align: justify;
+}
+
+/* 사이드바 참고링크 (ASIDE) */
+aside {
+  flex: 1;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid var(--dooly-green);
+  box-shadow: 0 5px 0 #C8E6C9;
+  text-align: center;
+}
+
+aside h3 {
+  font-size: 1.3rem;
+  color: var(--dooly-dark-green);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--dooly-yellow);
+  padding-bottom: 5px;
+}
+
+aside a {
+  display: inline-block;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease;
+}
+
+aside a:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.portal {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #E0E0E0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------
+   푸터 (FOOTER)
+   ------------------------------------------ */
+footer {
+  margin-top: 25px;
+  background-color: var(--dooly-dark-green);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  border: 3px solid #1B5E20;
+}
+
+footer h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------------------
+   반응형 웹 (모바일 레이아웃)
+   ------------------------------------------ */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .section1 img {
+    float: none;
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+}
